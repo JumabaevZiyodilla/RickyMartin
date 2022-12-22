@@ -1,0 +1,14 @@
+.select-episode {
+  display: block;
+  width: 200px;
+  margin: 0 auto 30px auto;
+  padding: 10px 30px;
+  color: #fff;
+  background-image: url('../../../assets/images/down.svg');
+  background-repeat: no-repeat;
+  background-size: 17px;
+  background-position: calc(50% + 80px);
+  border-radius: 10px;
+  background-color: #80808030;
+  appearance: none;
+}

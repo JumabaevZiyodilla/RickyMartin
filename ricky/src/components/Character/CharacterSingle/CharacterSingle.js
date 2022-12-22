@@ -18,7 +18,7 @@ const CharacterSingle = () => {
     console.log(api);
   return (
     <>
-      <section>
+      <section style={{paddingTop: "150px"}}>
         <div className="container">
           {results?.map((item,index) => (
             <SingleCard

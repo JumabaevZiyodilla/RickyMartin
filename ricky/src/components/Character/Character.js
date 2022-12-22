@@ -12,25 +12,29 @@ const Character = () => {
   const [data, setData] = useState([])
   const [status, setStatus] = useState('')
   const [gender, setGender] = useState('')
-  const [species, setSpecies] = useState("")
+  const [species, setSpecies] = useState('')
 
   let api = `https://rickandmortyapi.com/api/character/?page=${activePage}&name=${search}&status=${status}&gender=${gender}&species=${species}`
 
   const { info, results } = data
 
   useEffect(() => {
-    (async () => {
+    ;(async () => {
       const data = await fetch(api).then((res) => res.json())
       setData(data)
     })()
   }, [api])
   return (
     <>
-      <h2 className="mb-5 text-center text-white">Character</h2>
-      <div className="d-flex align-items-baseline">
-        <Search setSearch={setSearch} setActivePage={setActivePage} />
-        <Filter setStatus={setStatus} setGender={setGender} setActivePage={setActivePage} setSearch={setSearch} setSpecies={setSpecies} />
-      </div>
+      <h2 className="mb-5 text-center text-white title">Character</h2>
+      <Search setSearch={setSearch} setActivePage={setActivePage} />
+      <Filter
+        setStatus={setStatus}
+        setGender={setGender}
+        setActivePage={setActivePage}
+        setSearch={setSearch}
+        setSpecies={setSpecies}
+      />
       <ul className="card-list">
         {results?.length ? (
           results.map((item, index) => (
@@ -47,7 +51,7 @@ const Character = () => {
             </Link>
           ))
         ) : (
-          <h3>Not Found </h3>
+          <h3 className='text-white'>Not Found </h3>
         )}
       </ul>
       <Pagination

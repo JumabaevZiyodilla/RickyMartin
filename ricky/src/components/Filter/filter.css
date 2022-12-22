@@ -10,4 +10,30 @@
     color: #fff;
     text-decoration: underline;
     cursor: pointer;
+    text-align: center;
+}
+.select-box{
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+    margin: 0 auto;
+}
+.select-data,
+.select-gender,
+.select-species{
+    width: 150px;
+    padding: 10px 30px;
+    /* text-align: center; */
+    color: #fff;
+    background-image: url("../../assets/images/down.svg");
+    background-repeat: no-repeat;
+    background-size: 17px;
+    background-position: calc(50% + 50px);
+    border-radius: 10px;
+    background-color: #80808030;
+    appearance: none;
+}
+
+option{
+    color: #000;
 }
